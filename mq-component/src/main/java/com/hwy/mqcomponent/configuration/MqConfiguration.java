@@ -46,7 +46,7 @@ public class MqConfiguration {
         factory.setSessionAcknowledgeMode(1);
         factory.setMessageConverter(messageConverter());
         factory.setErrorHandler(new ExceptionHandler());
-        factory.setConcurrency("1-5");
+        factory.setConcurrency("1");
         factory.setPubSubDomain(true);
         return factory;
     }

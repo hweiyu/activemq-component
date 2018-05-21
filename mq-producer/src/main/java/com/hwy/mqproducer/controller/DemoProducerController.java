@@ -19,6 +19,11 @@ public class DemoProducerController {
     @RequestMapping(value = "producer/{message}")
     public String producer(@PathVariable("message") String message) {
         JmsTemplateUtil.send("demo.message", DemoBean.builder().message(message).build());
+        JmsTemplateUtil.send("demo.message2", DemoBean.builder().message(message).build());
+        JmsTemplateUtil.send("demo.message3", DemoBean.builder().message(message).build());
+        JmsTemplateUtil.send("demo.message4", DemoBean.builder().message(message).build());
+        JmsTemplateUtil.send("demo.message5", DemoBean.builder().message(message).build());
+        JmsTemplateUtil.send("demo.message6", DemoBean.builder().message(message).build());
         return "message : " + message + " send success";
     }
 }
